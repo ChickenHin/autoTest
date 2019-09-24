@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="regression"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="8.864">
+  <properties />
+  
+  
+            <testcase name="testNavigation" time="6.627" classname="cn.zhangxin.project.testcase.case_main" />
+                <testcase name="testGetActivity" time="2.237" classname="cn.zhangxin.project.testcase.case_main" />
+      
+</testsuite>

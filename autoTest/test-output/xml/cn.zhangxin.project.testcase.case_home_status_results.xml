@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="regression"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.602">
+  <properties />
+  
+  
+            <testcase name="testHomeStatus" time="1.602" classname="cn.zhangxin.project.testcase.case_home_status" />
+      
+</testsuite>

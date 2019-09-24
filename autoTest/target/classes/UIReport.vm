@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<head>
+  <title>test</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+
+</head>
+<body>
+
+<h1>Regression Test</h1>
+<table border="2" bgcolor="WhiteSmoke">
+  <tr bgcolor="yellow">
+  <th>OverView</th>
+  </tr>
+  <tr class="columnHeadings">
+    <td> </td>
+    <th>all</th>
+    <th>passed</th>
+    <th>faild</th>
+    <th>skipped</th>
+    <th>duration(S)</th>
+    <th>passration</th>
+  </tr>
+
+  <tr>
+  <td>TestResult</td>
+    <td>$overView.allTestsCount</td>
+    <td>$overView.passedTestsCount</td>
+    <td>$overView.failedTestsCount</td>
+    <td>$overView.skippedTestsCount</td>
+    <td>$overView.testsTime</td>
+    <td>$overView.passPercent</td>
+</tr>
+</table>
+<br/><br/>
+<table border="2" bgcolor="WhiteSmoke">
+  <tr bgcolor="green">
+  <th>PassTests</th>
+  </tr>
+  <tr class="columnHeadings">
+    <td> </td>
+    <th>className</th>
+    <th>testName</th>
+    <th>params</th>
+    <th>description</th>
+  </tr>
+
+  #foreach( $p in $pass)
+      <tr>
+      <td>$velocityCount</td>
+      <td>$p.testClassName</td>
+      <td>$p.testMethodName</td>
+      <td>$!p.params</td>
+      <td>
+      #foreach($o in $p.output)
+      $o<br/>
+      #end
+      </td>
+  #end
+</tr>
+
+</table>
+<br/>
+
+
+<br/><br/>
+<table border="2" bgcolor="WhiteSmoke">
+  <tr bgcolor="red">
+  <th>FailedTests</th>
+  </tr>
+  <tr class="columnHeadings">
+    <td> </td>
+    <th>className</th>
+    <th>testName</th>
+    <th>params</th>
+    <th>description</th>
+    <th>throwable</th>
+  </tr>
+
+  #foreach( $p in $fail)
+  <tr>
+  <td>$velocityCount</td>
+  <td>$p.testClassName</td>
+  <td>$p.testMethodName</td>
+  <td>$!p.params</td>
+  <td>
+  #foreach($o in $p.output)
+  $o<br/>
+  #end
+  </td>
+  <td>$p.throwable</td>
+  #end
+</tr>
+</table>
+<br/><br/>
+</body>
+</html>
